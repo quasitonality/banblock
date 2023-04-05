@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+
+	"name": "Banblock",
+	"description": "Stop the unsupported browser warning from appearing on Learn",
+	"version": "0.1",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [ {
+		"matches": ["https://learn-2.galvanize.com/*"],
+		"js": ["jquery.js", "banblock.js"]
+	}],
+
+	"permissions": ["tabs"],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Banblock"
+	}
+}
